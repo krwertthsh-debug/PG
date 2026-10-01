@@ -1,6 +1,12 @@
 #Authors-Juan Gras, Michael Truell, Aman Sanger
 #Gear Generator for basic high quality gears
-import adsk.core, adsk.fusion, adsk.cam, traceback
+try:
+    import adsk.core
+    import adsk.fusion
+    import adsk.cam
+    FUSION_AVAILABLE = True
+except ImportError:
+    FUSION_AVAILABLE = False
 import math as mt
 
 defaultfc=True
